@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    // 输出目录
+    "outDir": "./dist",
+    // 是否包含可以用于 debug 的 sourceMap
+    "sourceMap": true,
+    "baseUrl": "./",
+    // 与 Vue 的浏览器支持保持一致,语法编译为es5语法
+    "target": "es5",
+    // 这可以对 `this` 上的数据属性进行更严格的推断
+    "strict": true,
+    //模块采用import语法且不作转换，转换工作交给gulp任务中的webpack2
+    "module": "commonjs",
+    //用NPM模式加载
+    "moduleResolution": "node",
+    //对于没有Export的库进行兼容
+    "allowSyntheticDefaultImports": true,
+    //开启修饰器模式
+    "experimentalDecorators": true,
+    // 启用设计类型元数据（用于反射）
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": false,
+    // 编译过程中打印文件名
+    //"listFiles": true,
+    // 移除注释
+    "removeComments": true,
+    //识别基本的系统类库
+    "lib": [
+      "dom",
+      "es5",
+      "es2015"
+    ]
+  },
+  "include": ["src"],
+//   "exclude": [
+//     "node_modules"
+//   ],
+}
