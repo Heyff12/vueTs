@@ -5,6 +5,7 @@ import App from './App.vue'
 import router from './router'
 import "lib-flexible";
 const FastClick = require("fastclick") //解决300ms延迟
+import './router/class-component-hooks'
 
 import { Button, Cell, Spinner } from "mint-ui";
 Vue.component(Button.name, Button);
