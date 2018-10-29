@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App.vue'
+import store from "./store"
 import router from './router'
 import "lib-flexible";
 const FastClick = require("fastclick") //解决300ms延迟
@@ -20,6 +21,7 @@ window["FastClick"] = FastClick;
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
