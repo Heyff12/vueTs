@@ -32,10 +32,11 @@ module.exports = {
       config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json','.ts'],
+    extensions: ['.js', '.vue', '.json','.ts', '.scss'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      "style": resolve("src/style"),
     }
   },
   module: {

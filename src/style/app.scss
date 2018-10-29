@@ -1,0 +1,21 @@
+@import "./global.scss";
+
+#app {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 10rem;
+  font-size: 18px;
+
+  .logo {
+    width: 120px;
+    height: auto;
+  }
+
+  .menu {
+    display: flex;
+
+    li {
+      width: 33%;
+    }
+  }
+}

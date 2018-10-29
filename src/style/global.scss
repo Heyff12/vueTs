@@ -1,0 +1,75 @@
+$background_color: #f3f4f5;
+$padding:30px;
+$font_size:16px;
+
+
+body,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+menu,
+form,
+fieldset,
+legend,
+input,
+select,
+textarea,
+button,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+dl,
+ol {
+    list-style: none;
+}
+
+input,
+textarea {
+    /* 消除ios内阴影 */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+} 
+
+body {
+}
+
+
+/* ==================共用============================================================ */
+
+body {
+    -webkit-user-select: none;
+    -webkit-text-size-adjust: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
+    background: $background_color ;
+    /* 增加该属性，可以增加弹性 */
+    -webkit-overflow-scrolling: touch;
+    letter-spacing: 2px;
+}
+
+@mixin clearfix {
+    zoom: 1;
+    &:after {
+        content: " ";
+        display: block;
+        font-size: 0;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+        overflow: hidden;
+    }
+}

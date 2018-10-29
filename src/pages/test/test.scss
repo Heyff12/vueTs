@@ -1,0 +1,19 @@
+@import "~style/global.scss";
+.test{
+    background: white;
+    width: 100%;
+    padding: 20px $padding;
+    font-size: $font_size;
+    box-sizing: border-box;
+    ul{
+        line-height: 30px;
+        display: flex;
+        flex-direction: column;
+        li{
+            border-bottom: 1px solid green;/*no*/
+        }
+    }
+    .loading{
+        color:greenyellow;
+    }
+}
