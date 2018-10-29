@@ -20,9 +20,9 @@
       <p>Add Async: <input type="text" v-model="id" @keyup.enter="addTodoAsync(id)"></p>
     </div>
     <hr>
-    <div>
+    <div @click="increment">
       Clicked: {{ count }} times
-      <button @click="increment">+</button>
+      <button>+</button>
     </div>
   </div>
 </template>
