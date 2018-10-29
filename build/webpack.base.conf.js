@@ -32,7 +32,7 @@ module.exports = {
       config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: [".ts",'.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json','.ts'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
@@ -40,16 +40,11 @@ module.exports = {
   },
   module: {
     rules: [
-      ...(config.dev.useEslint ? [createLintingRule()] : []),
+      //...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
         test: /\.ts$/,
@@ -65,6 +60,11 @@ module.exports = {
           transpileOnly:true,
           appendTsSuffixTo: [/\.vue$/],
         }
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

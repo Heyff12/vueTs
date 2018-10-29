@@ -3,8 +3,17 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import "lib-flexible";
+const FastClick = require("fastclick") //解决300ms延迟
 
-Vue.config.productionTip = false
+import { Button, Cell, Spinner } from "mint-ui";
+Vue.component(Button.name, Button);
+Vue.component(Cell.name, Cell);
+Vue.component(Spinner.name, Spinner);
+
+Vue.config.productionTip = false;
+window["FastClick"] = FastClick;
+//window.FastClick = FastClick;
 
 /* eslint-disable no-new */
 new Vue({
