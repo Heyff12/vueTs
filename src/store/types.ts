@@ -1,5 +1,6 @@
 // Store
 export interface RootState {
+  route:any
   todos: TodoState
   count: number
 }

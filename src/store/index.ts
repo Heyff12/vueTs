@@ -8,6 +8,9 @@ Vue.use(Vuex)
 
 // const store: StoreOptions<RootState> = new Vuex.Store<RootState>({
 const store = new Vuex.Store<RootState>({
+  // state:{
+  //   route
+  // },
   modules: {
     todos,
     counter,

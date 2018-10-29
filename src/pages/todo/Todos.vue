@@ -54,12 +54,18 @@
     @TodoMutation toggleTodo
     @TodoAction addTodoAsync
 
+    @State("route") route
+
     newTodo: Todo = {
       text: '',
       checked: false
     }
 
     id:string = ""
+
+    created(){
+      console.log(this.route)
+    }
 
   }
 </script>

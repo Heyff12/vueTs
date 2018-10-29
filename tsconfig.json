@@ -1,35 +1,18 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
-    //识别基本的系统类库
-    // "lib": [
-    //     "dom",
-    //     "es5",
-    //     "es6",
-    //     "es7",
-    //     "es2015.promise"  
-    // ],
     "lib": ["es6", "es7", "es2017", "dom"],
-    // 是否包含可以用于 debug 的 sourceMap
     "sourceMap": true,
     "noImplicitAny": true,
-    // 与 Vue 的浏览器支持保持一致,语法编译为es5语法
     "target": "es5",
     "allowJs":true,
     "checkJs":true,
-    //开启修饰器模式
     "experimentalDecorators": true,
-    // 启用设计类型元数据（用于反射）
     "emitDecoratorMetadata": true,
-    //对于没有Export的库进行兼容
     "allowSyntheticDefaultImports": true,
-    // 这可以对 `this` 上的数据属性进行更严格的推断
     "strict": true,
-    //模块采用import语法且不作转换，转换工作交给gulp任务中的webpack2
     "module": "esnext",
-    //用NPM模式加载
     "moduleResolution": "node",
-    // 移除注释
     "removeComments": true,
     "pretty": true
   },
